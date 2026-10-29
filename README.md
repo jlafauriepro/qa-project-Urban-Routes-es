@@ -35,11 +35,31 @@ Urban Routes permite a los usuarios solicitar taxis configurando ruta, tarifa, m
 
 ## Estructura del proyecto
 
-- `main.py` — Page Object (`UrbanRoutesPage`) + clase de pruebas (`TestUrbanRoutes`)
-- `data.py` — datos de prueba separados del código de automatización
+```
+main.py    — Page Object (UrbanRoutesPage) + clase de pruebas (TestUrbanRoutes)
+data.py    — datos de prueba separados del código de automatización
+```
 
 ## Cómo ejecutar las pruebas
 
-1. Instalar dependencias: `pip install selenium pytest`
-2. Configurar la URL en `data.py`
-3. Ejecutar: `pytest main.py -v`
+### Requisitos previos
+
+- Python 3.x instalado
+- Google Chrome instalado
+- `chromedriver` compatible con tu versión de Chrome. Se recomienda usar [webdriver-manager](https://github.com/SergeyPirogov/webdriver_manager) para instalarlo automáticamente:
+
+```
+pip install webdriver-manager
+```
+
+### Instalación y ejecución
+
+1. Instalar dependencias:
+```
+pip install selenium pytest webdriver-manager
+```
+2. Configurar la URL de la aplicación en `data.py`
+3. Ejecutar las pruebas:
+```
+pytest main.py -v
+```
